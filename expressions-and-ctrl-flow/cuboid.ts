@@ -9,7 +9,7 @@
 let a: number = 20;
 let b: number = 5;
 let c: number = 10;
-let surface: number = 2 * ((a * b) + (a * c) + (b *c));
+let surface: number = 2 * ((a * b) + (a * c) + (b * c));
 let volume: number = a * b * c;
 
 console.log('Surface Area: ' + surface);
