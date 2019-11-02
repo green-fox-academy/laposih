@@ -14,3 +14,5 @@ let volume: number = a * b * c;
 
 console.log('Surface Area: ' + surface);
 console.log('Volume: ' + volume);
+
+export {}
