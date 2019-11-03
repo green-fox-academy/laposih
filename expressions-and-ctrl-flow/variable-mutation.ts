@@ -26,7 +26,7 @@ console.log(d);
 
 let e: number = 8;
 // what's the cube of e's value?
-e *= e; 
+e = e * e * e; 
 
 console.log(e);
 
@@ -34,25 +34,25 @@ let f1: number = 123;
 let f2: number = 345;
 // tell if f1 is bigger than f2 (as a boolean)
 
-let isBigger: boolean;
-if (f1 > f2) {
-    isBigger = true;
-}
-else {
-    isBigger = false;
-}
+let isBigger: boolean = f1 > f2;
+// if (f1 > f2) {
+//     isBigger = true;
+// }
+// else {
+//     isBigger = false;
+// }
 console.log(isBigger);
 
 let g1: number = 350;
 let g2: number = 200;
 // tell if the double of g2 is bigger than g1 (pras a boolean)
-let isDoubleG2Bigger: boolean;
-if (g1 < (g2 * 2)) {
+let isDoubleG2Bigger: boolean = g1 < (g2 * 2);
+/*if (g1 < (g2 * 2)) {
     isDoubleG2Bigger = true;
 }
 else {
     isDoubleG2Bigger = false;
-}
+}*/
 
 console.log(isDoubleG2Bigger);
 

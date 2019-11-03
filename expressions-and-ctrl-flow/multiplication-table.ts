@@ -20,11 +20,9 @@ let number: number = 15;
 // 10 * 15 = 150
 
 let anyNumber: number = 15;
-let sum: number;
 
 for (let i: number = 1; i <= 10; i++) {
-    sum = i;
-    console.log(sum + ' * ' + anyNumber + ' = ' + sum * anyNumber);
+    console.log(i + ' * ' + anyNumber + ' = ' + i * anyNumber);
   }
 
 

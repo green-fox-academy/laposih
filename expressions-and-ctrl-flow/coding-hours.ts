@@ -13,4 +13,6 @@ let codingHours = 6;
 let weeksOfSemester = 17;
 let averageWorkHours = 52;
 
-console.log(Math.round((codingHours * weeksOfSemester * 5) / (weeksOfSemester * averageWorkHours) * 100));
+console.log('An attendee codes ' + codingHours * weeksOfSemester * 5 + ' hours in a semester.');
+
+console.log('Percentage of the coding hours are ' + Math.round((codingHours * weeksOfSemester * 5) / (weeksOfSemester * averageWorkHours) * 100) + '.');
