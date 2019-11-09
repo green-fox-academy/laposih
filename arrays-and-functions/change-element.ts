@@ -8,13 +8,24 @@ let numList: number[] = [1, 2, 3, 8, 5, 6];
 
 console.log(numList);
 
-numList.forEach(function (e) {
-    if (numList[e] == 8) {
-        numList[e] = 4;
+/*numList.forEach(function (e, i) {
+    if (e == 8) {
+        numList[i] = 4;
     }
 });
 
-console.log(numList[3]);
+console.log(numList[3]);*/
+
+
+numList = numList.map(function(e) {
+    if (e == 8) {
+        return 4;
+    }
+    else {
+        return e;
+    }
+  });
+  console.log(numList);
 
 /*let numList: number[] = [1, 2, 3, 8, 5, 6].map(function(e: number); {
     return e * 2;
