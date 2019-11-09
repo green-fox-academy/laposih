@@ -12,8 +12,9 @@ numList.forEach(function (e) {
     if (numList[e] == 8) {
         numList[e] = 4;
     }
-    console.log(e);
 });
+
+console.log(numList[3]);
 
 /*let numList: number[] = [1, 2, 3, 8, 5, 6].map(function(e: number); {
     return e * 2;
