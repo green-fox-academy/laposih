@@ -9,9 +9,9 @@ function printParams(...params: any[]): any {
     for (let i: number = 0; i < params.length; i++) {
         output = output + params[i] + ' ';
     }
-    return output;
-    }
+    console.log(output);
+}
 
-console.log(printParams(4, true, "kiskutya"));
+printParams(4, true, "kiskutya");
 
 export{}
