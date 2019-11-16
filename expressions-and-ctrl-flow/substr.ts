@@ -28,3 +28,12 @@ console.log(substr("this is what I'm searching in", "searching"));
 
 // should print: `-1`
 console.log(substr("this is what I'm searching in", "not"));
+
+
+let str: string = "this is what I'm searching in";
+let keyword: string = "searching";
+//keyword = "kiskutya";
+console.log(str.indexOf(keyword));
+
+
+export {}
