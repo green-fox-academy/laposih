@@ -13,14 +13,51 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-let size: number = 3;
-let matrix: numbers[][] = [];
-//matrix = [[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]];
-matrix.fill(0, 0, size);
-console.log(matrix);
+function createDiagonalMatrix(size: number, defaultElement: number, diagonalElement: number): number[][] {
+    const diagonalMatrix: number[][] = [];
+    for (let i = 0; i < size; i++) {
+      const row = [];
+      for (let j = 0; j < size; j++) {
+        if (i + j === size - 1) {
+          row.push(diagonalElement);
+        } else {
+          row.push(defaultElement);
+        }
+      }
+      diagonalMatrix.push(row);
+    }
+    return diagonalMatrix;
+  }
+  const size = 3;
+  const defaultElement = 0;
+  const diagonalElement = 1;
+  console.log(createDiagonalMatrix(size, defaultElement, diagonalElement));
 
 
 
+/*[
+    [0, 0, 1]
+    [0, 1, 0]
+    [1, 0, 0]
+]
+ij
+00 01 02
+10 11 12
+20 21 22
+nekunk most nem ez kell
+
+n = 3
+akkor kell 1-est rajolni, ha az i + j = n - 1
+
+
+eloszor feltolteni 0-kal
+let m: numbers[][];
+m[0][0] = 0  hibat dob, mert undefined
+let m: numbers[][] = [];
+m[0][0]
+a 2 for loopban mindig letre kell hozni egy ures arrayt
+m[1] = [] aztan minden elem toltodjon feltolteni
+m[0].push(0)*/
 
 /*
 this.things = [];
