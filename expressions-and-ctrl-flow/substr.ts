@@ -30,10 +30,16 @@ console.log(substr("this is what I'm searching in", "searching"));
 console.log(substr("this is what I'm searching in", "not"));
 
 
-let str: string = "this is what I'm searching in";
-let keyword: string = "searching";
-//keyword = "kiskutya";
-console.log(str.indexOf(keyword));
+
+function substrWithIndexOf(str: string, keyword: string): number {
+    return str.indexOf(keyword);
+  }
+
+// should print: `17`
+console.log(substrWithIndexOf("this is what I'm searching in", "searching"));
+
+// should print: `-1`
+console.log(substrWithIndexOf("this is what I'm searching in", "not"));
 
 
 export {}
