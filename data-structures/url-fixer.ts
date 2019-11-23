@@ -12,3 +12,5 @@ array.splice(url.indexOf('/'), 0, ':');
 url = array.join('');
 
 console.log(url);
+
+export{}
