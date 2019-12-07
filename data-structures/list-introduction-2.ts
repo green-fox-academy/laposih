@@ -17,17 +17,18 @@ const listB: string[] = listA.map(x => x);
 
 console.log('List A includes Durian: ' + listA.includes('Durian'));
 
-listB.splice(listB.indexOf('Durian', 1));
+listB.splice(listB.indexOf('Durian'), 1);
 listA.splice(4, 0, 'Kiwifruit');
 
 function compareLists(list1: any[], list2: any[]){
     if (list1.length > list2.length){
-        console.log(list1 + ' is longer than ' + list2);
+        console.log('List 1 is longer than list 2');
     }
     if (list1.length < list2.length){
-        console.log(list2 + ' is longer than ' + list1);
+        console.log('List 2 is longer than list 1');
     }
-    if (list1.length == list2.length){
+    else {
+           // if (list1.length == list2.length){
         console.log('The lists are equally long.');
     }
 }
