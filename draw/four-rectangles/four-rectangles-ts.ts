@@ -16,7 +16,7 @@ function drawRectangles(volume: number){
 
 function drawRandom(quant: number){
     for (let i: number = 0; i < quant; i++){
-        drawRectangles(100);
+        drawRectangles(200);
 
     }
 }
