@@ -28,10 +28,15 @@ function createDiagonalMatrix(size: number, defaultElement: number, diagonalElem
     }
     return diagonalMatrix;
   }
-  const size = 3;
+  const size = 4;
   const defaultElement = 0;
   const diagonalElement = 1;
-  console.log(createDiagonalMatrix(size, defaultElement, diagonalElement));
+  
+  const matrix: number[][] = createDiagonalMatrix(size, defaultElement, diagonalElement);
+  for (let i = 0; i < matrix.length; i++) {
+    console.log(matrix[i]);
+  }
+  
 
 
 
