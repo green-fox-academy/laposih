@@ -16,11 +16,11 @@ export abstract class Animal {
     sex: Sex;
     blood: Blood;
 
-    constructor(name: string, age: number, sex: Sex, blood: Blood) {
+    constructor(name: string, age: number = 0, sex: Sex = Sex.female, blood: Blood = Blood.warm) {
         this.name = name;
-        this.age = 0;
-        this.sex = Sex.female;
-        this.blood = Blood.warm;
+        this.age = age;
+        this.sex = sex;
+        this.blood = blood;
     }
 
     getName(): string {
