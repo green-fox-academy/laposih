@@ -6,24 +6,32 @@
 
 import { Reservationy } from "./Reservationy"
 
-const alphabet: string[] = ("abcdefghijklmnopqrstuvwxyz").toUpperCase().split("");
+const alphabet: string[] = ("0123456789abcdefghijklmnopqrstuvwxyz").toUpperCase().split("");
 
 export class Reservation implements Reservationy {
     DOW: string[];
     character: string[];
 
-    constructor(DOW: string[], character: string[]) {
+    constructor() {
         this.DOW = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
         this.character = alphabet;
     }
     
+    getRandomInt(max: number): number {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+
     getDowBooking(): string {
-        
-        return
+        return this.DOW[this.getRandomInt(this.DOW.length)];
     }
 
     getCodeBooking(): string {
-        return
+        let length = 8;
+        let code: string = '';
+        for (let i: number = 0; i < length; i++) {
+            code = code + this.character[this.getRandomInt(this.character.length)];
+        }
+        return code;
     }
 
 }
