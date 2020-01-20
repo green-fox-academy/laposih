@@ -11,8 +11,10 @@ const alphabet: string[] = ("0123456789abcdefghijklmnopqrstuvwxyz").toUpperCase(
 export class Reservation implements Reservationy {
     DOW: string[];
     character: string[];
+    length: number;
 
-    constructor() {
+    constructor(length: number) {
+        this.length = length;
         this.DOW = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
         this.character = alphabet;
     }
@@ -26,9 +28,8 @@ export class Reservation implements Reservationy {
     }
 
     getCodeBooking(): string {
-        let length = 8;
         let code: string = '';
-        for (let i: number = 0; i < length; i++) {
+        for (let i: number = 0; i < this.length; i++) {
             code = code + this.character[this.getRandomInt(this.character.length)];
         }
         return code;
